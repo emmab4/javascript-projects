@@ -19,33 +19,33 @@ let preparedforLiftoff = true
 
 // add logic below to verify total number of astronauts for shuttle launch does not exceed 7
 
-if (astronautCount <= 7){
-    console.log ("Prepare for liftoff")
-}
+console.log(astronautCount <= 7);
+
 
 // add logic below to verify all astronauts are ready
 
-if (astronautStatus === "ready"){
-    console.log ("Prepare for liftoff 2")
-}
+console.log(astronautStatus === "ready");
 
 // add logic below to verify the total mass does not exceed the maximum limit of 850000
-
-if (totalMassKg < maximumMassLimit){
-
-}
+console.log(totalMassKg < maximumMassLimit);
 
 // add logic below to verify the fuel temperature is within the appropriate range of -150 and -300
-
-if (fueltempCelsius >= -300 || fueltempCelsius <= -150)
+console.log(fueltempCelsius >= -300 || fueltempCelsius <= -150);
 
 // add logic below to verify the fuel level is at 100%
-
-if (fuelLevel === "100%")
+console.log(fuelLevel === "100%");
 
 // add logic below to verify the weather status is clear
 
-if (weatherStatus === "clear")
+console.log(weatherStatus === "clear")
 
 // Verify shuttle launch can proceed based on above conditions
-console.log("Liftoff!!")
+if (astronautCount <= 7) 
+    if (astronautStatus === "ready")
+        if (totalMassKg < maximumMassLimit)
+            if (fueltempCelsius >= -300 || fueltempCelsius <= -150)
+                if (fuelLevel === "100%") 
+                    if (weatherStatus === "clear") 
+                        console.log("Liftoff! All systems are a go! Initiating launch sequence. " + "Date:",date + " Time:",time + " Astronaut Count:",astronautCount + "Crew Mass:",crewMassKg + "Fuel Mass:", fuelMassKg); 
+
+else console.log("Launch scrubbed!");
